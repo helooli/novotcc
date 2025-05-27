@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paranaguá Turismo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles that can't be done with Tailwind */
+        .slide {
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide:not(.active) {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .slide.active {
+            opacity: 1;
+            position: relative;
+            z-index: 1;
+        }
+        .carousel-container {
+            height: 500px;
+        }
+        @media (max-width: 768px) {
+            .carousel-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-green-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-green-600 shadow-md w-full py-4 px-6 flex items-center justify-between">
+        <!-- Home Icon -->
+        <a href="/" class="text-white hover:text-green-100 transition-colors">
+            <i class="fas fa-home text-2xl"></i>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="relative mx-4 flex-grow max-w-2xl">
+            <input type="text" placeholder="Pesquisar..." 
+                   class="w-full py-2 px-4 pr-10 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500">
+            <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-green-600">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <!-- Auth Buttons -->
+        <div class="flex space-x-2">
+            <a href="login.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                Login
+            </a>
+            <a href="cadastro.html" class="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg transition-colors">
+                Cadastro
+            </a>
+        </div>
+    </header>
+
+    <!-- Logo and Title -->
+    <div class="flex flex-col items-center my-6">
+        <div class="flex items-center">
+            <img src="logo.png" alt="Logo Paranaguá Turismo" class="w-20 h-20">
+            <h1 class="text-4xl font-bold text-green-800 ml-4">Paranaguá Turismo</h1>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel-container relative w-full max-w-6xl mx-auto my-8 rounded-xl overflow-hidden shadow-lg">
+        <div class="slides h-full w-full">
+            <div class="slide active h-full w-full">
+                <img src="images.png01.png" alt="Foto 1" class="w-full h-full object-cover">
+            </div>
+            <div class="slide h-full w-full">
+                <img src="paranaguá03.png" alt="Foto 2" class="w-full h-full object-cover">
+            </div>
+            <div class="slide h-full w-full">
+                <img src="paranguá.png" alt="Foto 3" class="w-full h-full object-cover">
+            </div>
+            <div class="slide h-full w-full">
+                <img src="paranaguá01.png" alt="Foto 4" class="w-full h-full object-cover">
+            </div>
+        </div>
+        
+        <!-- Navigation Dots -->
+        <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+            <span class="dot active w-3 h-3 rounded-full bg-white cursor-pointer" data-index="0" aria-label="Foto 1"></span>
+            <span class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 cursor-pointer" data-index="1" aria-label="Foto 2"></span>
+            <span class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 cursor-pointer" data-index="2" aria-label="Foto 3"></span>
+            <span class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 cursor-pointer" data-index="3" aria-label="Foto 4"></span>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="w-full max-w-6xl mx-auto my-8">
+        <ul class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <li class="bg-green-600 hover:bg-green-700 transition-colors rounded-lg">
+                <a href="culinaria.html" class="block text-white text-center py-3 px-4">
+                    <i class="fas fa-utensils mr-2"></i>Culinária
+                </a>
+            </li>
+            <li class="bg-green-600 hover:bg-green-700 transition-colors rounded-lg">
+                <a href="pnts.html" class="block text-white text-center py-3 px-4">
+                    <i class="fas fa-map-marked-alt mr-2"></i>Pontos Turísticos
+                </a>
+            </li>
+            <li class="bg-green-600 hover:bg-green-700 transition-colors rounded-lg">
+                <a href="historias.html" class="block text-white text-center py-3 px-4">
+                    <i class="fas fa-landmark mr-2"></i>História e Curiosidades
+                </a>
+            </li>
+            <li class="bg-green-600 hover:bg-green-700 transition-colors rounded-lg">
+                <a href="Hotelaria.html" class="block text-white text-center py-3 px-4">
+                    <i class="fas fa-hotel mr-2"></i>Hotelaria
+                </a>
+            </li>
+            <li class="bg-green-600 hover:bg-green-700 transition-colors rounded-lg">
+                <a href="cultura.html" class="block text-white text-center py-3 px-4">
+                    <i class="fas fa-music mr-2"></i>Cultura e Festas
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- History Section -->
+    <section class="w-full max-w-6xl mx-auto my-12 px-4">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <h1 class="text-3xl font-bold text-green-800 p-6 border-b border-gray-200">História de Paranaguá</h1>
+            <div class="p-6 md:flex">
+                <img src="images.png02.png" alt="História de Paranaguá" class="w-full md:w-1/2 h-auto object-cover rounded-lg mb-6 md:mb-0 md:mr-6">
+                <div class="prose max-w-none">
+                    <p class="text-gray-700 mb-4">Paranaguá, fundada em 29 de julho de 1648, é a cidade mais antiga do Paraná e um importante centro histórico e cultural do Brasil. Originalmente habitada por indígenas, a região começou a ser colonizada por europeus no século XVI, tornando-se um ponto estratégico para a exploração e comércio.</p>
+                    <p class="text-gray-700 mb-4">O povoamento do litoral paranaense teve início por volta de 1550, com a chegada de imigrantes de São Vicente e Cananéia. Paranaguá se destacou como um dos primeiros núcleos de colonização, facilitando a entrada de novos colonos e a exploração de recursos naturais.</p>
+                    <p class="text-gray-700 mb-4">O porto de Paranaguá, um dos mais importantes do Brasil, foi crucial para o desenvolvimento econômico da cidade e do estado. A infraestrutura portuária permitiu o crescimento do comércio e a movimentação de mercadorias, contribuindo para a prosperidade local.</p>
+                    <p class="text-gray-700 mb-4">Além disso, a cidade preserva uma rica herança cultural, refletida em suas festas, tradições e na arquitetura colonial, que atraem turistas e estudiosos. Recentemente, obras como o livro "Paranaguá Grande Mar Redondo" têm sido lançadas para documentar e celebrar a história da cidade, destacando sua importância cultural e turística.</p>
+                    <p class="text-gray-700">Paranaguá continua a ser um símbolo de resistência e identidade para os paranaenses, com um legado que se estende por séculos, sendo um verdadeiro berço da história do estado do Paraná.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white mt-auto py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Paranaguá Turismo</h3>
+                    <p>Explore a rica história, cultura e belezas naturais da cidade mais antiga do Paraná.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-green-300 transition-colors">Início</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition-colors">Sobre Nós</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition-colors">Contato</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition-colors">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Redes Sociais</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-green-300 transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300 transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-300 transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-green-700 mt-8 pt-6 text-center">
+                <p>&copy; 2023 Paranaguá Turismo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel functionality
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        const intervalTime = 5000; // 5 seconds
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+                dot.classList.toggle('bg-opacity-50', i !== index);
+            });
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            let nextIndex = (currentIndex + 1) % totalSlides;
+            showSlide(nextIndex);
+        }
+
+        let slideInterval = setInterval(nextSlide, intervalTime);
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(parseInt(dot.dataset.index));
+                slideInterval = setInterval(nextSlide, intervalTime);
+            });
+        });
+
+        // Pause carousel on hover
+        const carousel = document.querySelector('.carousel-container');
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        carousel.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextSlide, intervalTime);
+        });
+    </script>
+</body>
+</html>
