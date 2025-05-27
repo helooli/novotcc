@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CULINÁRIA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .food-section {
+            scroll-margin-top: 100px;
+        }
+        .nav-link:hover {
+            transform: translateY(-3px);
+        }
+        .food-image {
+            transition: transform 0.3s ease;
+        }
+        .food-image:hover {
+            transform: scale(1.03);
+        }
+        @media (max-width: 768px) {
+            .food-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="bg-amber-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-amber-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">
+                    <a href="#" class="flex items-center">
+                        <i class="fas fa-utensils mr-2"></i>
+                        Culinária Paranaense
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="culinaria.html" class="nav-link px-3 py-2 rounded-md font-medium hover:bg-amber-800 transition duration-300">Culinária</a>
+                    <a href="pnts.html" class="nav-link px-3 py-2 rounded-md font-medium hover:bg-amber-800 transition duration-300">Pontos Turísticos</a>
+                    <a href="historias.html" class="nav-link px-3 py-2 rounded-md font-medium hover:bg-amber-800 transition duration-300">História e Curiosidades</a>
+                    <a href="Hotelaria.html" class="nav-link px-3 py-2 rounded-md font-medium hover:bg-amber-800 transition duration-300">Hotelaria</a>
+                    <a href="cultura.html" class="nav-link px-3 py-2 rounded-md font-medium hover:bg-amber-800 transition duration-300">Cultura e Festas</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-amber-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="culinaria.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-amber-700">Culinária</a>
+                <a href="pnts.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-amber-700">Pontos Turísticos</a>
+                <a href="historias.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-amber-700">História e Curiosidades</a>
+                <a href="Hotelaria.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-amber-700">Hotelaria</a>
+                <a href="cultura.html" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-amber-700">Cultura e Festas</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-amber-700 to-amber-900 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Sabores do Litoral Paranaense</h1>
+            <p class="text-xl md:text-2xl mb-8">Descubra a riqueza gastronômica de Paranaguá e região</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#caranguejo" class="bg-white text-amber-800 px-6 py-3 rounded-full font-semibold hover:bg-amber-100 transition duration-300">
+                    <i class="fas fa-crab mr-2"></i>Explorar Pratos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Caranguejo Section -->
+        <section id="caranguejo" class="food-section mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
+                    <i class="fas fa-crab text-amber-700 mr-2"></i>CARANGUEJO
+                </h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+
+            <div class="food-content flex flex-col md:flex-row items-center mb-10 bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:w-1/2 p-6">
+                    <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Caranguejo" 
+                         class="food-image w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <p class="text-gray-700 mb-4">
+                        Caranguejo é um animal muito conhecido por fazer parte de diferentes pratos, principalmente da culinária litorânea. Trata-se de um animal invertebrado do filo dos artrópodes e do subfilo Crustacea, ao qual pertencem também lagostas, camarões e lagostins.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Caranguejos verdadeiros fazem parte da infraordem Brachyura e se destacam por ter 10 patas, sendo o primeiro par dotado de pinças. Além disso, possuem uma carapaça resistente e um corpo arredondado.
+                    </p>
+                    <p class="text-gray-700">
+                        No Nordeste do país, nos estados de Sergipe, Bahia, Pará e principalmente Maranhão, existe um forte uso dos crustáceos braquiuros na culinária. O caranguejo-uçá figura entre os mais utilizados, presente em tortas, bolinhos, casquinhas e outros pratos populares.
+                    </p>
+                </div>
+            </div>
+
+            <div class="food-content flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:w-1/2 p-6">
+                    <img src="https://images.unsplash.com/photo-1626804471359-3c5a1f4d1d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Habitat do Caranguejo" 
+                         class="food-image w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <p class="text-gray-700 mb-4">
+                        Caranguejos são encontrados, principalmente, no ambiente marinho. Entretanto, isso não significa que eles ocorrem apenas em água salgada, sendo possível verificar espécies vivendo em água doce e também no ambiente terrestre.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        O caranguejo-uçá (Ucides cordatus), uma importante espécie encontrada no Brasil, possui hábito semiterrestre e é encontrado em áreas estuarinas (onde há o encontro do meio marinho, terrestre e dulçaquícola), onde escava tocas no sedimento dos mangues.
+                    </p>
+                    <p class="text-gray-700">
+                        Ele é encontrado desde a região da Flórida, nos Estados Unidos, até Santa Catarina, no Brasil, sendo uma das espécies mais comuns nos manguezais brasileiros. Outra espécie que ocorre em nosso território é o guaiamum (Cardisoma guanhumi), encontrado em ambientes estuarinos ao longo de toda a costa do Atlântico Ocidental da América.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ostra Section -->
+        <section id="ostra" class="food-section mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
+                    <i class="fas fa-fish text-amber-700 mr-2"></i>OSTRA
+                </h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+
+            <div class="food-content flex flex-col md:flex-row items-center mb-10 bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:w-1/2 p-6">
+                    <img src="https://images.unsplash.com/photo-1633617477271-d4f843a0d7af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Ostras" 
+                         class="food-image w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <p class="text-gray-700 mb-4">
+                        A ostra é consumida desde os primórdios da humanidade. Na verdade, elas já existiam no Período Triássico, o primeiro período da Era Mesozóica, junto com os ancestrais dos dinossauros.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Algum tempo depois, a ostra se tornou um ingrediente comum nas refeições dos homens pré-históricos que a cozinhavam sobre pedras quentes ou direto no fogo. Na Roma Antiga, elas faziam sucesso temperadas com pimenta, levístico, vinagre, garum, azeite e vinho e eram indicadas para uma série de doenças como indigestão, úlcera e anemia.
+                    </p>
+                    <p class="text-gray-700">
+                        São conhecidas pela sua utilização na alimentação e pela capacidade de produzir pérolas. As ostras são moluscos filtradores e bioacumuladores, o que significa que podem acumular substâncias tóxicas presentes na água onde vivem.
+                    </p>
+                </div>
+            </div>
+
+            <div class="food-content flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:w-1/2 p-6">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Ostras preparadas" 
+                         class="food-image w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <p class="text-gray-700 mb-4">
+                        As ostras podem ser encontradas em todos os mares do mundo, menos em águas muito frias e/ou poluídas. No início, estes moluscos vivem soltos nas águas e na areia e com o passar do tempo fixam-se nas rochas. Seus principais predadores são, além do homem, diversas espécies de peixes, a estrela do mar, caranguejos e outros tipos de moluscos.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Hoje, os maiores produtores de ostras são: Portugal, Itália, França, Inglaterra, Holanda e Bélgica.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Ostras podem ser consumidas nas conchas, cruas, defumadas, cozidas, assadas, fritas, estufadas, enlatadas, em conserva, cozidas no vapor ou gratinadas, ou ainda utilizadas em diversas bebidas.
+                    </p>
+                    <div class="bg-amber-100 p-4 rounded-lg">
+                        <h3 class="font-bold text-amber-800 mb-2">
+                            <i class="fas fa-clock mr-2"></i>Horário e Localização
+                        </h3>
+                        <p class="text-amber-900">
+                            A Ostra Bêbada está localizado na Rua Benjamin Constant, 89, Paranaguá, e funciona de quarta a domingo, das 8h às 23h.
+                            <br>A partir das 11h, são servidos pratos feitos e caranguejo durante todo o dia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Barreado Section -->
+        <section id="barreado" class="food-section mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
+                    <i class="fas fa-drumstick-bite text-amber-700 mr-2"></i>BARREADO
+                </h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+
+            <div class="food-content flex flex-col md:flex-row items-center mb-10 bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:w-1/2 p-6">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Barreado" 
+                         class="food-image w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <p class="text-gray-700 mb-4">
+                        Sua origem é açoriana de um ritual de mais de 300 anos ainda seguido no preparo do prato. A origem é atribuída aos portugueses que vieram para o litoral do Paraná no século XVIII. Os registros antigos indicam a vila de Guaraqueçaba como a disseminadora da receita.
+                    </p>
+                    <p class="text-gray-700">
+                        O tempero do prato seguiu junto com outras manifestações culturais para o continente, entre elas o fandango, dança de tamancos ao som da rabeca, trazidos pelos açorianos e que são típicos da cultura caiçara.
+                    </p>
+                </div>
+            </div>
+
+            <div class="food-content flex flex-col md:flex-row-reverse items-center mb-10 bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:w-1/2 p-6">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                         alt="Preparo do Barreado" 
+                         class="food-image w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <p class="text-gray-700 mb-4">
+                        O costume de cozinhar a carne bovina foi levado ao litoral do Paraná pelos primeiros portugueses que chegaram na região. Os portugueses realizavam os mutirões, que na linguagem indígena era denomina de "pixirum", que significa "fazer tudo em conjunto".
+                    </p>
+                    <p class="text-gray-700">
+                        A população local, formada por portugueses, caboclos e indígenas, se reuniam, por exemplo, em colheitas e construções de igrejas e escolas. Nessas mutirões sempre serviam cachaça e refeições com bastante sustâncias, como a carne barreada, que era considerada simples e de fácil preparado, podendo ainda ser requentada diversas vezes no fogo a lenha.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-amber-800 mb-4">
+                    <i class="fas fa-home text-amber-700 mr-2"></i>CASA DO BARREADO
+                </h3>
+            </div>
+
+            <div class="food-content bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                <div class="p-6">
+                    <p class="text-gray-700 mb-6">
+                        A Casa do Barreado oferece uma experiência gastronômica memorável em um ambiente acolhedor e caseiro. Especializada em barreado, a chef Norma prepara pratos deliciosos, além de opções de frutos do mar. O atendimento atencioso e as sobremesas caseiras são destaques, proporcionando uma refeição completa e saborosa. O ambiente amplo e verde, juntamente com a hospitalidade da equipe, faz com que os visitantes se sintam em casa. Com reservas antecipadas durante a semana e atendimento ao público aos fins de semana, a Casa do Barreado é uma parada obrigatória para quem busca a verdadeira culinária do litoral.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                             alt="Casa do Barreado" 
+                             class="food-image w-full md:w-1/2 lg:w-1/3 h-64 object-cover rounded-lg shadow-md">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Prato na Casa do Barreado" 
+                             class="food-image w-full md:w-1/2 lg:w-1/3 h-64 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="bg-amber-100 p-4 rounded-lg">
+                        <h3 class="font-bold text-amber-800 mb-2">
+                            <i class="fas fa-clock mr-2"></i>Horário e Localização
+                        </h3>
+                        <p class="text-amber-900">
+                            Rua José Antônio da Cruz, 78 Ponta do Caju, Paranaguá, Paraná Brasil.
+                            <br>Funcionamento de Sábado e Domingo das 12h à 15H
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arroz Lambe-Lambe Section -->
+        <section id="arroz" class="food-section mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
+                    <i class="fas fa-utensil-spoon text-amber-700 mr-2"></i>ARROZ LAMBE-LAMBE
+                </h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+
+            <div class="food-content flex flex-col md:flex-row items-center mb-10 bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:w-1/2 p-6">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Arroz Lambe-Lambe" 
+                         class="food-image w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <p class="text-gray-700 mb-4">
+                        Trata-se de um prato típico simples e delicioso, feito apenas com marisco, arroz e temperos. É uma comida típica de áreas litorâneas onde é abundante a presença do marisco, (também chamado de mexilhão em algumas partes do Brasil).
+                    </p>
+                </div>
+            </div>
+
+            <div class="food-content flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:w-1/2 p-6">
+                    <img src="https://images.unsplash.com/photo-1510626176961-4b1d3de9c5e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Mariscos" 
+                         class="food-image w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <p class="text-gray-700 mb-4">
+                        E nem precisa de talheres para comer. No Lambe Lambe o arroz é bem temperado e cozido com o marisco ainda na casca. Durante o cozimento, os mariscos vão se abrindo e soltando todo o seu sabor.
+                    </p>
+                    <p class="text-gray-700">
+                        Já o arroz, por sua vez, invade e preenche as conchas. Originalmente se comia com as mãos, utilizando a própria concha e no final sempre se lambia a concha. Daí vem o nome do prato.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Danúbio Azul Section -->
+        <section id="danubio" class="food-section mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
+                    <i class="fas fa-store text-amber-700 mr-2"></i>DANÚBIO AZUL
+                </h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+
+            <div class="food-content bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <p class="text-gray-700 mb-6">
+                        O Restaurante Danúbio Azul em Paranaguá, Paraná, é uma instituição com mais de 70 anos de história na cidade. Fundado em 1954, foi adquirido pela família Carmezin em 1963 e atualmente é o restaurante mais antigo em funcionamento na região. O restaurante é conhecido por sua especialidade em frutos do mar e pela tradicional cozinha internacional, com opções à la carte, buffet livre ou por quilo.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Restaurante Danúbio Azul" 
+                             class="food-image w-full md:w-1/2 lg:w-1/3 h-64 object-cover rounded-lg shadow-md">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                             alt="Interior do Danúbio Azul" 
+                             class="food-image w-full md:w-1/2 lg:w-1/3 h-64 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="bg-amber-100 p-4 rounded-lg">
+                        <h3 class="font-bold text-amber-800 mb-2">
+                            <i class="fas fa-clock mr-2"></i>Horário e Localização
+                        </h3>
+                        <p class="text-amber-900">
+                            Rua Xv de Novembro, 95 Centro Histórico, Paranaguá, Paraná
+                            <br>De segunda à sábado das 11:00H à 15:00H/19:00 à 00:00H
+                            <br>Domingo das 11:00H à 16:00H
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tainha Section -->
+        <section id="tainha" class="food-section mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
+                    <i class="fas fa-fish text-amber-700 mr-2"></i>TAINHA-ASSADA
+                </h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+
+            <div class="food-content flex flex-col md:flex-row items-center mb-10 bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:w-1/2 p-6">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" 
+                         alt="Tainha" 
+                         class="food-image w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <p class="text-gray-700 mb-4">
+                        A origem da pesca da tainha no Brasil está intimamente ligada à história dos povos indígenas, que praticavam essa pesca desde muito antes da chegada dos colonizadores europeus. As comunidades indígenas, especialmente as de origem tupi, que habitavam o litoral desde o norte de São Paulo até Cabo Frio, no Rio de Janeiro, dependiam da tainha como fonte de alimento e a pescavam de forma artesanal.
+                    </p>
+                    <p class="text-gray-700">
+                        Com o tempo, a pesca da tainha tornou-se uma tradição cultural e econômica, sendo praticada por pescadores e comunidades costeiras de diferentes regiões do Brasil.
+                    </p>
+                </div>
+            </div>
+
+            <div class="food-content flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:w-1/2 p-6">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" 
+                         alt="Tainha assada" 
+                         class="food-image w-full h-auto rounded-lg shadow-md">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <p class="text-gray-700 mb-4">
+                        A chegada dos colonizadores açorianos, por exemplo, trouxe técnicas e conhecimentos marítimos que foram incorporados à prática da pesca da tainha em Santa Catarina. A pesca da tainha é um exemplo de como a tradição indígena se mantém viva e se adapta a diferentes contextos históricos e sociais.
+                    </p>
+                    <p class="text-gray-700">
+                        É uma atividade que une comunidades, preserva conhecimentos ancestrais e contribui para a identidade cultural de diversas regiões costeiras. A pesca da tainha é uma expressão de resiliência e orgulho para as comunidades pesqueiras, que continuam a praticá-la e a transmitir os seus conhecimentos para as próximas gerações.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurante Orlas Section -->
+        <section id="orlas" class="food-section">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
+                    <i class="fas fa-umbrella-beach text-amber-700 mr-2"></i>RESTAURANTE ORLAS
+                </h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+
+            <div class="food-content bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <p class="text-gray-700 mb-6">
+                        O Mercado Municipal de Paranaguá é um lugar movimentado e animado, onde o visitante pode encontrar produtos locais, incluindo frutos do mar frescos, artesanato e souvenirs. Também é possível fazer degustação de bebidas e comidas regionais.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Em Paranaguá, as "orlas" referem-se ao espaço costeiro e às áreas próximas à água, incluindo praias, calçadas e áreas de lazer. No contexto comercial, a região da orla geralmente oferece uma variedade de opções, como: Comida local, frutos do mar, petiscos e bebidas, vista para o mar.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                             alt="Restaurante Orlas" 
+                             class="food-image w-full md:w-1/2 lg:w-1/3 h-64 object-cover rounded-lg shadow-md">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Vista do Restaurante Orlas" 
+                             class="food-image w-full md:w-1/2 lg:w-1/3 h-64 object-cover rounded-lg shadow-md">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-utensils mr-2"></i>Culinária Paranaense
+                    </h3>
+                    <p class="text-amber-200">
+                        Descubra os sabores autênticos do litoral do Paraná, onde tradição e sabor se encontram.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="culinaria.html" class="text-amber-200 hover:text-white transition duration-300">Culinária</a></li>
+                        <li><a href="pnts.html" class="text-amber-200 hover:text-white transition duration-300">Pontos Turísticos</a></li>
+                        <li><a href="historias.html" class="text-amber-200 hover:text-white transition duration-300">História e Curiosidades</a></li>
+                        <li><a href="Hotelaria.html" class="text-amber-200 hover:text-white transition duration-300">Hotelaria</a></li>
+                        <li><a href="cultura.html" class="text-amber-200 hover:text-white transition duration-300">Cultura e Festas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contato</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span class="text-amber-200">Paranaguá, PR - Brasil</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span class="text-amber-200">+55 (41) 99999-9999</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span class="text-amber-200">contato@culinariaparanaense.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-8 pt-8 text-center text-amber-200">
+                <p>&copy; 2023 Culinária Paranaense. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
